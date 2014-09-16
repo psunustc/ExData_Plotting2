@@ -1,6 +1,6 @@
 plot5<-function(){
-    #NEI <- readRDS("summarySCC_PM25.rds")
-    #SCC <- readRDS("Source_Classification_Code.rds")
+    NEI <- readRDS("summarySCC_PM25.rds")
+    SCC <- readRDS("Source_Classification_Code.rds")
     data <- NEI[NEI$fips =="24510", -1] 
     coalIndex <- data.frame(as.character(SCC$SCC)[
                     grep(pattern = "Mobile", x = SCC$EI.Sector, ignore.case = T)], 

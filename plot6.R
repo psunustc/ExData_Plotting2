@@ -1,6 +1,6 @@
 plot6<-function(){
-    #NEI <- readRDS("summarySCC_PM25.rds")
-    #SCC <- readRDS("Source_Classification_Code.rds")
+    NEI <- readRDS("summarySCC_PM25.rds")
+    SCC <- readRDS("Source_Classification_Code.rds")
     library(reshape)
     data <- NEI[NEI$fips%in%c("24510", "06037"), ] 
     coalIndex <- data.frame(as.character(SCC$SCC)[

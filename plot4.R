@@ -1,6 +1,6 @@
 plot4<-function(){
-    #NEI <- readRDS("summarySCC_PM25.rds")
-    #SCC <- readRDS("Source_Classification_Code.rds")
+    NEI <- readRDS("summarySCC_PM25.rds")
+    SCC <- readRDS("Source_Classification_Code.rds")
     coalIndex <- data.frame(as.character(SCC$SCC)[grep(pattern = "coal", 
                     x = SCC$EI.Sector, ignore.case = T)], stringsAsFactors =F)
     names(coalIndex) <- "SCC"

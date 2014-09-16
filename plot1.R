@@ -1,6 +1,6 @@
 plot1<-function(){
-    #NEI <- readRDS("summarySCC_PM25.rds")
-    #SCC <- readRDS("Source_Classification_Code.rds")
+    NEI <- readRDS("summarySCC_PM25.rds")
+    SCC <- readRDS("Source_Classification_Code.rds")
     total <- with(NEI, tapply(Emissions, year, sum))
     Year <- as.numeric(names(total))
     
