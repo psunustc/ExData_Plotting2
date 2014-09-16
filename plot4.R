@@ -7,7 +7,7 @@ plot4<-function(){
     data <- merge(x = NEI, y = coalIndex, by.x = "SCC", by.y = "SCC", all = F)
     
     total <- with(data, tapply(Emissions, year, sum))
-    Year <- unique(data$year)
+    Year <- as.numeric(rownames(total))
     
     png(filename = "plot4.png", width = 640, height = 480, units = "px", 
         bg = "white", pointsize = 12)
